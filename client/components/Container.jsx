@@ -4,6 +4,7 @@ Container = React.createClass({
       <div className="outerDiv">
         <IntroComponent/>
         <ScheduleComponent/>
+        <MapComponent/>
       </div>
     );
   }
