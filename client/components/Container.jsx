@@ -3,6 +3,7 @@ Container = React.createClass({
     return(
       <div className="outerDiv">
         <IntroComponent/>
+        <ScheduleComponent/>
       </div>
     );
   }

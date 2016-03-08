@@ -25,3 +25,25 @@ body{
 .innerDiv h2{
   font-family: 'Share Tech Mono', serif;
 }
+
+.ScheduleTable{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table, th, td {
+    border: 1px #c0392b;
+    border-collapse: collapse;
+}
+
+th{
+  text-align: right;
+}
+
+th, td {
+    padding: 5px;    
+}
+
+td{
+  text-align: left;
+}
