@@ -42,10 +42,26 @@ GoogleMap = React.createClass({
     });
 
     GoogleMaps.ready(this.props.name, function(map) {
-      var marker = new google.maps.Marker({
-        position: map.options.center,
-        map: map.instance
-      });
+      var locations = [
+        ['Majoitus', 60.4400759, 22.2909164],
+        ['Showroom', 60.4485752, 22.2635677]
+      ];
+      var infowindow = new google.maps.InfoWindow();
+      var marker, i;
+
+      for (i = 0; i < locations.length; i++) {  
+        marker = new google.maps.Marker({
+          position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+          map: map.instance
+        });
+
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+          return function() {
+            infowindow.setContent(locations[i][0]);
+            infowindow.open(map.instance, marker);
+          }
+        })(marker, i));
+      }
     });
   },
   componentWillUnmount() {
