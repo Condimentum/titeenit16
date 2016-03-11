@@ -44,6 +44,7 @@ table, th, td {
 
 th{
   text-align: right;
+  vertical-align: top;
 }
 
 th, td {
