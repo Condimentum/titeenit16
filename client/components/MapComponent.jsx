@@ -17,7 +17,7 @@ MyTestMap = React.createClass({
   },
   _mapOptions() {
     return {
-      center: new google.maps.LatLng(60.4447759, 22.2937829),
+      center: new google.maps.LatLng(60.446494, 22.283787),
       zoom: 14
     };
   },
@@ -43,46 +43,50 @@ GoogleMap = React.createClass({
 
     GoogleMaps.ready(this.props.name, function(map) {
       var locations = [
-        ['Majoitus', 'https://goo.gl/maps/exb3ZLa2s182', 60.4400759, 22.2909164],
-        ['Showroom','https://goo.gl/maps/bvNJuLRuwmo', 60.4485752, 22.2635677],
-        ['Liikennepuisto', 'https://goo.gl/maps/5w2cQDb44FN2', 60.445343, 22.286680],
-        ['Tivoli', 'https://goo.gl/maps/BJ56xnoRDoG2', 60.4473199, 22.2805452],
-        ['Boost', 'https://goo.gl/maps/LXcbWE9Yi4D2', 60.4501433, 22.2915006]
-      ];
-      var food = [
-        ['Kultainen Hirvi', 'https://goo.gl/maps/pE1mp13hDt22', 60.447982, 22.2863981, 'Hyvää pubiruokaa, kaljaa'],
-        ['Delhi Darbar', 'https://goo.gl/maps/Az6CsFmsQdL2', 60.447995, 22.2798321, 'Intialaista'],
-        ['Assarin Ullakko', 'https://goo.gl/maps/vVBpgbqa4oN2', 60.4543154, 22.2853261, 'Opiskelijaravintola, avoinna la 11-16'],
-        ['Hesburger', 'https://goo.gl/maps/ewNaMKwNHpM2', 60.4449166, 22.2986474],
-        ['Stadionin pikapala', 'https://goo.gl/maps/TKdqVXyqGKU2', 60.441265, 22.2918573, 'Grilli'],
-        ['Kupittaan Kebab & Pizzeria', 'https://goo.gl/maps/VqgG4RYqq6A2', 60.4457272,22.2801644],
-        ['Arezzo', 'https://goo.gl/maps/RsEkx9bbWrv', 60.450491, 22.2767032, 'Kebab-pizzeria'],
-        ['Kotipizza', 'https://goo.gl/maps/357s9tyj3n92', 60.4462406, 22.2817113],
-        ['Hesburger', 'https://goo.gl/maps/PP2zevUNrET2', 60.4394297, 22.2802879]
-      ];
-      var shops =[
-        ['Citymarket', 'https://goo.gl/maps/QU2s9CW48DN2', 60.4417544, 22.2842287, 'La 8-21'],
-        ['Alko', 'https://goo.gl/maps/Rvwkfa6JizF2', 60.4417544, 22.2842287],
-        ['K-market', 'https://goo.gl/maps/vMmU17xiuus', 60.4493804, 22.2923968, 'La 9-21'],
-        ['K-market', 'https://goo.gl/maps/ayRxG5Em96u', 60.453073, 22.286868, 'La 7-23'],
-        ['Sale', 'https://goo.gl/maps/wg1M3yuvwbM2', 60.4523958, 22.282871, 'La 10-23'],
-        ['K-Extra', 'https://goo.gl/maps/SQ1AtCQFXdA2', 60.4523958,22.282871, 'La 7-22']
+        ['Majoitus', 'https://goo.gl/maps/exb3ZLa2s182', 60.440062, 22.293108, '', '0'],
+        ['Showroom','https://goo.gl/maps/bvNJuLRuwmo', 60.448573, 22.265756, '', '1'],
+        ['Liikennepuisto', 'https://goo.gl/maps/5w2cQDb44FN2', 60.445343, 22.286750, '', '1'],
+        ['Tivoli', 'https://goo.gl/maps/BJ56xnoRDoG2', 60.447317, 22.282734, '', '1'],
+        ['Boost', 'https://goo.gl/maps/LXcbWE9Yi4D2', 60.450140, 22.293690, '', '1'],
+        ['Kultainen Hirvi', 'https://goo.gl/maps/pE1mp13hDt22', 60.448055, 22.288839, 'Hyvää pubiruokaa, kaljaa', '2'],
+        ['Delhi Darbar', 'https://goo.gl/maps/Az6CsFmsQdL2', 60.451895, 22.283035, 'Intialaista', '2'],
+        ['Assarin Ullakko', 'https://goo.gl/maps/vVBpgbqa4oN2', 60.454302, 22.287526, 'Opiskelijaravintola, avoinna la 11-16', '2'],
+        ['Hesburger', 'https://goo.gl/maps/ewNaMKwNHpM2', 60.445282, 22.301029, '', '2'],
+        ['Stadionin pikapala', 'https://goo.gl/maps/TKdqVXyqGKU2', 60.442284, 22.294271, 'Grilli', '2'],
+        ['Kupittaan Kebab & Pizzeria', 'https://goo.gl/maps/VqgG4RYqq6A2', 60.447192, 22.283035, '', '2'],
+        ['Arezzo', 'https://goo.gl/maps/RsEkx9bbWrv', 60.450483, 22.278903, 'Kebab-pizzeria', '2'],
+        ['Kotipizza', 'https://goo.gl/maps/357s9tyj3n92', 60.446235, 22.283900, '', '2'],
+        ['Hesburger', 'https://goo.gl/maps/PP2zevUNrET2', 60.440123, 22.282498, '', '2'],
+        ['Citymarket', 'https://goo.gl/maps/QU2s9CW48DN2', 60.441732, 22.286418, 'La 8-21', '3'],
+        ['Alko', 'https://goo.gl/maps/Rvwkfa6JizF2', 60.442372, 22.286804, '', '4'],
+        ['K-market', 'https://goo.gl/maps/vMmU17xiuus', 60.449335, 22.293491, 'La 9-21', '3'],
+        ['K-market', 'https://goo.gl/maps/ayRxG5Em96u', 60.453080, 22.286861, 'La 7-23', '3'],
+        ['Sale', 'https://goo.gl/maps/wg1M3yuvwbM2', 60.452193, 22.284499, 'La 10-23', '3'],
+        ['K-Extra', 'https://goo.gl/maps/SQ1AtCQFXdA2', 60.452526, 22.283458, 'La 7-22', '3']
       ];
       var infowindow = new google.maps.InfoWindow();
       var marker, i;
-
+      var path = ''
+      var icons = [
+        'http://titeeniappi.meteor.com/images/map/home.png',
+        'http://titeeniappi.meteor.com/images/map/cut.png',
+        'http://titeeniappi.meteor.com/images/map/restaurant.png',
+        'http://titeeniappi.meteor.com/images/map/shop.png',
+        'http://titeeniappi.meteor.com/images/map/alko.png'
+      ];
       for (i in locations) {  
         marker = new google.maps.Marker({
           position: new google.maps.LatLng(locations[i][2], locations[i][3]),
-          map: map.instance
+          map: map.instance,
+          title: locations[i][0],
+          icon: icons[locations[i][5]]
         });
-
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
-          return function() {
-            infowindow.setContent('<h3>' + locations[i][0] + '</h3>' + '</p><a href="' + locations[i][1] + '" target="_blank">Google Maps -linkki</a></p>');
-            infowindow.open(map.instance, marker);
-          }
-        })(marker, i));
+            return function() {
+              infowindow.setContent('<h3>' + marker.title + '</h3>' + '<p>' + locations[i][4] + '</p><p><a href="' + locations[i][1] + '" target="_blank">Google Maps -linkki</a></p>');
+              infowindow.open(map.instance, marker);
+            }
+          })(marker, i));
       }
     });
   },

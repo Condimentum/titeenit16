@@ -25,6 +25,7 @@ Meteor.methods({
 		return;
 	}
 });
+
 var tapahtumat = [
 	{nimi: 'Titeenikuumotukset', pvm: 'Nyt', klo: '04:00', paikka: 'Tietoteekkarikaupungit', epoch: 1457661600000},
 	{nimi: 'Majoitus aukeaa', pvm: 'Perjantaina', klo: '17:30', paikka: 'Kupittaan koulu', epoch: 1458315000000},
