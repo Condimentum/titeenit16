@@ -49,6 +49,25 @@ GoogleMap = React.createClass({
         ['Tivoli', 'https://goo.gl/maps/BJ56xnoRDoG2', 60.4473199, 22.2805452],
         ['Boost', 'https://goo.gl/maps/LXcbWE9Yi4D2', 60.4501433, 22.2915006]
       ];
+      var food = [
+        ['Kultainen Hirvi', 'https://goo.gl/maps/pE1mp13hDt22', 60.447982, 22.2863981, 'Hyvää pubiruokaa, kaljaa'],
+        ['Delhi Darbar', 'https://goo.gl/maps/Az6CsFmsQdL2', 60.447995, 22.2798321, 'Intialaista'],
+        ['Assarin Ullakko', 'https://goo.gl/maps/vVBpgbqa4oN2', 60.4543154, 22.2853261, 'Opiskelijaravintola, avoinna la 11-16'],
+        ['Hesburger', 'https://goo.gl/maps/ewNaMKwNHpM2', 60.4449166, 22.2986474],
+        ['Stadionin pikapala', 'https://goo.gl/maps/TKdqVXyqGKU2', 60.441265, 22.2918573, 'Grilli'],
+        ['Kupittaan Kebab & Pizzeria', 'https://goo.gl/maps/VqgG4RYqq6A2', 60.4457272,22.2801644],
+        ['Arezzo', 'https://goo.gl/maps/RsEkx9bbWrv', 60.450491, 22.2767032, 'Kebab-pizzeria'],
+        ['Kotipizza', 'https://goo.gl/maps/357s9tyj3n92', 60.4462406, 22.2817113],
+        ['Hesburger', 'https://goo.gl/maps/PP2zevUNrET2', 60.4394297, 22.2802879]
+      ];
+      var shops =[
+        ['Citymarket', 'https://goo.gl/maps/QU2s9CW48DN2', 60.4417544, 22.2842287, 'La 8-21'],
+        ['Alko', 'https://goo.gl/maps/Rvwkfa6JizF2', 60.4417544, 22.2842287],
+        ['K-market', 'https://goo.gl/maps/vMmU17xiuus', 60.4493804, 22.2923968, 'La 9-21'],
+        ['K-market', 'https://goo.gl/maps/ayRxG5Em96u', 60.453073, 22.286868, 'La 7-23'],
+        ['Sale', 'https://goo.gl/maps/wg1M3yuvwbM2', 60.4523958, 22.282871, 'La 10-23'],
+        ['K-Extra', 'https://goo.gl/maps/SQ1AtCQFXdA2', 60.4523958,22.282871, 'La 7-22']
+      ];
       var infowindow = new google.maps.InfoWindow();
       var marker, i;
 
